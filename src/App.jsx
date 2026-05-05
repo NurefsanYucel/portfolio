@@ -5,7 +5,7 @@ const GITHUB_USERNAME = "NurefsanYucel";
 
 const PROJECT_IMAGES = {
   mythodex: "/src/assets/mythodex.png",
-  secure_prog_project: "/src/assets/mythodex.jpg",
+  secure_prog_project: "/src/assets/mythodex.png",
   "my-lublin-blog": "/src/assets/myLublinBlog.png",
   "traffic-light-system": "/src/assets/traffic.png",
   skillforge: "/src/assets/skillforge.png",
