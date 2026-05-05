@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
+// GitHub username used to fetch repositories from GitHub API
 const GITHUB_USERNAME = "NurefsanYucel";
 
+// Local project images matched by repository name
 const PROJECT_IMAGES = {
   mythodex: "/src/assets/mythodex.png",
   secure_prog_project: "/src/assets/mythodex.png",
@@ -12,11 +14,13 @@ const PROJECT_IMAGES = {
   "crypto-tracker": "/src/assets/crypto.png"
 };
 
+// Live demo links for deployed projects
 const LIVE_LINKS = {
   "my-lublin-blog": "https://my-lublin-blog.vercel.app/",
   skillforge: "https://skillforge-red-eight.vercel.app/"
 };
 
+// Repositories hidden from the portfolio project list
 const HIDDEN_PROJECTS = [
   "curriculum",
   "rock-paper-scissors",
@@ -24,19 +28,23 @@ const HIDDEN_PROJECTS = [
   "landing_page",
   "css-exercises",
   "odin-recipes",
-  "basicWebPage"
+  "basicWebPage",
+  "portfolio"
 ];
 
 function App() {
+  // Stores repositories fetched from GitHub
   const [repos, setRepos] = useState([]);
 
   useEffect(() => {
+    // Fetch repositories from GitHub and keep only valid array responses
     fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated`)
       .then((res) => res.json())
       .then((data) => setRepos(Array.isArray(data) ? data : []))
       .catch(console.error);
   }, []);
 
+  // Remove repositories that should not appear in the portfolio
   const filteredRepos = repos.filter(
     (repo) =>
       !HIDDEN_PROJECTS.some(
@@ -44,22 +52,31 @@ function App() {
       )
   );
 
+  // Select MythoDex as the featured project
   const featuredProject = filteredRepos.find(
     (repo) => repo.name.toLowerCase() === "mythodex"
   );
 
+  // All other repositories are displayed in the project grid
   const otherProjects = filteredRepos.filter(
     (repo) => repo.name.toLowerCase() !== "mythodex"
   );
 
   return (
     <main>
+      {/* Hero section */}
       <section className="hero">
         <p className="subtitle">MSc Cyber Security Student • Computer Engineer</p>
-        <h1>Hello! I’m Efsan</h1>
+
+        <h1>
+          Hello!
+          <br />
+          I’m Efsan
+        </h1>
+
         <p className="description">
-          I build web applications and security-focused projects. Here are some
-          of my GitHub projects.
+          I build secure, scalable web applications with a focus on clean design,
+          performance, and practical security.
         </p>
 
         <div className="hero-buttons">
@@ -70,12 +87,14 @@ function App() {
           >
             GitHub Profile
           </a>
+
           <a href="#projects" className="secondary">
             View Projects
           </a>
         </div>
       </section>
 
+      {/* About section */}
       <section id="about" className="about">
         <div className="about-container">
           <div className="about-image">
@@ -84,11 +103,11 @@ function App() {
 
           <div className="about-content">
             <p className="section-label">About Me</p>
-            <h2>Currently a Cyber Security student </h2>
+            <h2>Currently a Cyber Security student</h2>
 
             <p>
-              I’m Efsan, a second-year MSc Cyber Security student at Maria Curie-Skłodowska University 
-              and a Computer Engineering graduate from Marmara University in Istanbul. 
+              I’m Efsan, a second-year MSc Cyber Security student at Maria Curie-Skłodowska University
+              and a Computer Engineering graduate from Marmara University in Istanbul.
               I’m interested in secure web development, full-stack applications, and practical security-focused projects.
             </p>
 
@@ -99,6 +118,7 @@ function App() {
               continuously learning new technologies to expand my skill set.
             </p>
 
+            {/* Skill tags */}
             <div className="about-tags">
               <span>React</span>
               <span>Next.js</span>
@@ -110,6 +130,7 @@ function App() {
         </div>
       </section>
 
+      {/* Featured project section */}
       {featuredProject && (
         <section className="featured">
           {PROJECT_IMAGES[featuredProject.name.toLowerCase()] && (
@@ -122,11 +143,13 @@ function App() {
 
           <p className="section-label">Featured Project</p>
           <h2>{featuredProject.name}</h2>
+
           <p>
             {featuredProject.description ||
               "A mythology-themed web application where users can explore and manage mythical creatures."}
           </p>
 
+          {/* Repository metadata */}
           <div className="meta">
             {featuredProject.language && <span>{featuredProject.language}</span>}
             <span>⭐ {featuredProject.stargazers_count}</span>
@@ -150,6 +173,7 @@ function App() {
         </section>
       )}
 
+      {/* Project grid section */}
       <section id="projects" className="projects">
         <p className="section-label">Portfolio</p>
         <h2>My Projects</h2>
@@ -171,6 +195,7 @@ function App() {
                 <h3>{repo.name}</h3>
                 <p>{repo.description || "No description added yet."}</p>
 
+                {/* Repository language and stars */}
                 <div className="meta">
                   {repo.language && <span>{repo.language}</span>}
                   <span>⭐ {repo.stargazers_count}</span>
