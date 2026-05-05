@@ -6,17 +6,18 @@ const GITHUB_USERNAME = "NurefsanYucel";
 const PROJECT_IMAGES = {
   mythodex: "/src/assets/mythodex.png",
   secure_prog_project: "/src/assets/mythodex.jpg",
-  "my-lublin-blog": "/src/assets/myLublinBlog.png"
+  "my-lublin-blog": "/src/assets/myLublinBlog.png",
+  "traffic-light-system": "/src/assets/traffic.png",
+  skillforge: "/src/assets/skillforge.png",
+  "crypto-tracker": "/src/assets/crypto.png"
 };
 
 const LIVE_LINKS = {
-  "my-lublin-blog": "https://my-lublin-blog.vercel.app/"
+  "my-lublin-blog": "https://my-lublin-blog.vercel.app/",
+  skillforge: "https://skillforge-red-eight.vercel.app/"
 };
 
 const HIDDEN_PROJECTS = [
-  "kodluyoruz-frontend-101-egitimi",
-  "Patika.DevHafta1Projeleri",
-  "kodluyoruzilkrepo",
   "curriculum",
   "rock-paper-scissors",
   "javascript-exercises",
@@ -54,11 +55,11 @@ function App() {
   return (
     <main>
       <section className="hero">
-        <p className="subtitle">Cyber Security Student • Full Stack Developer</p>
-        <h1>Hi, I’m Efsan</h1>
+        <p className="subtitle">MSc Cyber Security Student • Computer Engineer</p>
+        <h1>Hello! I’m Efsan</h1>
         <p className="description">
           I build web applications and security-focused projects. Here are some
-          of my selected GitHub projects.
+          of my GitHub projects.
         </p>
 
         <div className="hero-buttons">
@@ -72,6 +73,40 @@ function App() {
           <a href="#projects" className="secondary">
             View Projects
           </a>
+        </div>
+      </section>
+
+      <section id="about" className="about">
+        <div className="about-container">
+          <div className="about-image">
+            <img src="/src/assets/me.jpeg" alt="Efsan" />
+          </div>
+
+          <div className="about-content">
+            <p className="section-label">About Me</p>
+            <h2>Currently a Cyber Security student </h2>
+
+            <p>
+              I’m Efsan, a second-year MSc Cyber Security student at Maria Curie-Skłodowska University 
+              and a Computer Engineering graduate from Marmara University in Istanbul. 
+              I’m interested in secure web development, full-stack applications, and practical security-focused projects.
+            </p>
+
+            <p>
+              My focus is building real-world applications with authentication, databases,
+              and security considerations while improving my knowledge in Linux,
+              networking, and system security. I’m also exploring low-code approaches and
+              continuously learning new technologies to expand my skill set.
+            </p>
+
+            <div className="about-tags">
+              <span>React</span>
+              <span>Next.js</span>
+              <span>TypeScript</span>
+              <span>Supabase</span>
+              <span>Cyber Security</span>
+            </div>
+          </div>
         </div>
       </section>
 
