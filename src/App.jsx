@@ -1,17 +1,24 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
+import mythodexImg from "./assets/mythodex.png";
+import myLublinBlogImg from "./assets/myLublinBlog.png";
+import trafficImg from "./assets/traffic.png";
+import skillforgeImg from "./assets/skillforge.png";
+import cryptoImg from "./assets/crypto.png";
+import meImg from "./assets/me.jpeg";
+
 // GitHub username used to fetch repositories from GitHub API
 const GITHUB_USERNAME = "NurefsanYucel";
 
 // Local project images matched by repository name
 const PROJECT_IMAGES = {
-  mythodex: "/src/assets/mythodex.png",
-  secure_prog_project: "/src/assets/mythodex.png",
-  "my-lublin-blog": "/src/assets/myLublinBlog.png",
-  "traffic-light-system": "/src/assets/traffic.png",
-  skillforge: "/src/assets/skillforge.png",
-  "crypto-tracker": "/src/assets/crypto.png"
+  mythodex: mythodexImg,
+  secure_prog_project: mythodexImg,
+  "my-lublin-blog": myLublinBlogImg,
+  "traffic-light-system": trafficImg,
+  skillforge: skillforgeImg,
+  "crypto-tracker": cryptoImg,
 };
 
 // Live demo links for deployed projects
@@ -98,7 +105,7 @@ function App() {
       <section id="about" className="about">
         <div className="about-container">
           <div className="about-image">
-            <img src="/src/assets/me.jpeg" alt="Efsan" />
+            <img src={meImg} alt="Efsan" />
           </div>
 
           <div className="about-content">
