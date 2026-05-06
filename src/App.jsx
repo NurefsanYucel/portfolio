@@ -24,7 +24,8 @@ const PROJECT_IMAGES = {
 // Live demo links for deployed projects
 const LIVE_LINKS = {
   "my-lublin-blog": "https://my-lublin-blog.vercel.app/",
-  skillforge: "https://skillforge-red-eight.vercel.app/"
+  skillforge: "https://skillforge-red-eight.vercel.app/",
+  "secure_prog_project": "https://secure-prog-project.vercel.app/"
 };
 
 // Repositories hidden from the portfolio project list
