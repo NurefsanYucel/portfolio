@@ -7,7 +7,7 @@ import trafficImg from "./assets/traffic.png";
 import skillforgeImg from "./assets/skillforge.png";
 import cryptoImg from "./assets/crypto.png";
 import meImg from "./assets/me.jpeg";
-import dataIntegrityAnalyzerImg from "./assets/dataIntegrityAnalyzer.png.png";
+import dataIntegrityAnalyzerImg from "./assets/dataIntegrityAnalyzer.png";
 
 // GitHub username used to fetch repositories from GitHub API
 const GITHUB_USERNAME = "NurefsanYucel";
