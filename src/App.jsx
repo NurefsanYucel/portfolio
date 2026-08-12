@@ -7,6 +7,7 @@ import trafficImg from "./assets/traffic.png";
 import skillforgeImg from "./assets/skillforge.png";
 import cryptoImg from "./assets/crypto.png";
 import meImg from "./assets/me.jpeg";
+import dataIntegrityAnalyzerImg from "./assets/dataIntegrityAnalyzer.png.png";
 
 // GitHub username used to fetch repositories from GitHub API
 const GITHUB_USERNAME = "NurefsanYucel";
@@ -19,13 +20,15 @@ const PROJECT_IMAGES = {
   "traffic-light-system": trafficImg,
   skillforge: skillforgeImg,
   "crypto-tracker": cryptoImg,
-};
+  dataIntegrityAnalyzer: dataIntegrityAnalyzerImg
+}
 
 // Live demo links for deployed projects
 const LIVE_LINKS = {
   "my-lublin-blog": "https://my-lublin-blog.vercel.app/",
   skillforge: "https://skillforge-red-eight.vercel.app/",
-  "secure_prog_project": "https://secure-prog-project.vercel.app/"
+  "secure_prog_project": "https://secure-prog-project.vercel.app/",
+  dataIntegrityAnalyzer: "https://data-integrity-analyzer.vercel.app/"
 };
 
 // Repositories hidden from the portfolio project list
