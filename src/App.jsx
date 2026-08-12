@@ -20,7 +20,7 @@ const PROJECT_IMAGES = {
   "traffic-light-system": trafficImg,
   skillforge: skillforgeImg,
   "crypto-tracker": cryptoImg,
-  dataIntegrityAnalyzer: dataIntegrityAnalyzerImg
+  "data-integrity-analyzer": dataIntegrityAnalyzerImg
 }
 
 // Live demo links for deployed projects
